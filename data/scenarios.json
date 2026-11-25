@@ -1,0 +1,892 @@
+{
+  "scenarios": [
+    {
+      "id": "clean-01",
+      "slice": "clean",
+      "caller_intent": "check_balance",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I want to check my balance.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "Account ending 1234.",
+          "expected": "use_value",
+          "latency_budget_ms": 600,
+          "true_value": "1234",
+          "heard_value": "1234"
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "clean-02",
+      "slice": "clean",
+      "caller_intent": "check_balance",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I want to check my balance.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "Account ending 1234.",
+          "expected": "use_value",
+          "latency_budget_ms": 600,
+          "true_value": "1234",
+          "heard_value": "1234"
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "clean-03",
+      "slice": "clean",
+      "caller_intent": "check_balance",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I want to check my balance.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "Account ending 1234.",
+          "expected": "use_value",
+          "latency_budget_ms": 600,
+          "true_value": "1234",
+          "heard_value": "1234"
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "clean-04",
+      "slice": "clean",
+      "caller_intent": "check_balance",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I want to check my balance.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "Account ending 1234.",
+          "expected": "use_value",
+          "latency_budget_ms": 600,
+          "true_value": "1234",
+          "heard_value": "1234"
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "clean-05",
+      "slice": "clean",
+      "caller_intent": "check_balance",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I want to check my balance.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "Account ending 1234.",
+          "expected": "use_value",
+          "latency_budget_ms": 600,
+          "true_value": "1234",
+          "heard_value": "1234"
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "clean-06",
+      "slice": "clean",
+      "caller_intent": "check_balance",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I want to check my balance.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "Account ending 1234.",
+          "expected": "use_value",
+          "latency_budget_ms": 600,
+          "true_value": "1234",
+          "heard_value": "1234"
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "barge-01",
+      "slice": "barge_in",
+      "caller_intent": "reschedule_appointment",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I need to reschedule my appointment.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "barge_in",
+          "user_text": "Wait \u2014 stop, not Tuesday, Thursday instead!",
+          "expected": "stop_acknowledge_recover",
+          "latency_budget_ms": 900
+        },
+        {
+          "kind": "barge_in",
+          "user_text": "And stop again \u2014 morning, not afternoon!",
+          "expected": "stop_acknowledge_recover",
+          "latency_budget_ms": 900
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "Confirmation code 4821.",
+          "expected": "use_value",
+          "latency_budget_ms": 600,
+          "true_value": "4821",
+          "heard_value": "4821"
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "barge-02",
+      "slice": "barge_in",
+      "caller_intent": "reschedule_appointment",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I need to reschedule my appointment.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "barge_in",
+          "user_text": "Wait \u2014 stop, not Tuesday, Thursday instead!",
+          "expected": "stop_acknowledge_recover",
+          "latency_budget_ms": 900
+        },
+        {
+          "kind": "barge_in",
+          "user_text": "And stop again \u2014 morning, not afternoon!",
+          "expected": "stop_acknowledge_recover",
+          "latency_budget_ms": 900
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "Confirmation code 4821.",
+          "expected": "use_value",
+          "latency_budget_ms": 600,
+          "true_value": "4821",
+          "heard_value": "4821"
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "barge-03",
+      "slice": "barge_in",
+      "caller_intent": "reschedule_appointment",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I need to reschedule my appointment.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "barge_in",
+          "user_text": "Wait \u2014 stop, not Tuesday, Thursday instead!",
+          "expected": "stop_acknowledge_recover",
+          "latency_budget_ms": 900
+        },
+        {
+          "kind": "barge_in",
+          "user_text": "And stop again \u2014 morning, not afternoon!",
+          "expected": "stop_acknowledge_recover",
+          "latency_budget_ms": 900
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "Confirmation code 4821.",
+          "expected": "use_value",
+          "latency_budget_ms": 600,
+          "true_value": "4821",
+          "heard_value": "4821"
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "barge-04",
+      "slice": "barge_in",
+      "caller_intent": "reschedule_appointment",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I need to reschedule my appointment.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "barge_in",
+          "user_text": "Wait \u2014 stop, not Tuesday, Thursday instead!",
+          "expected": "stop_acknowledge_recover",
+          "latency_budget_ms": 900
+        },
+        {
+          "kind": "barge_in",
+          "user_text": "And stop again \u2014 morning, not afternoon!",
+          "expected": "stop_acknowledge_recover",
+          "latency_budget_ms": 900
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "Confirmation code 4821.",
+          "expected": "use_value",
+          "latency_budget_ms": 600,
+          "true_value": "4821",
+          "heard_value": "4821"
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "barge-05",
+      "slice": "barge_in",
+      "caller_intent": "reschedule_appointment",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I need to reschedule my appointment.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "barge_in",
+          "user_text": "Wait \u2014 stop, not Tuesday, Thursday instead!",
+          "expected": "stop_acknowledge_recover",
+          "latency_budget_ms": 900
+        },
+        {
+          "kind": "barge_in",
+          "user_text": "And stop again \u2014 morning, not afternoon!",
+          "expected": "stop_acknowledge_recover",
+          "latency_budget_ms": 900
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "Confirmation code 4821.",
+          "expected": "use_value",
+          "latency_budget_ms": 600,
+          "true_value": "4821",
+          "heard_value": "4821"
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "barge-06",
+      "slice": "barge_in",
+      "caller_intent": "reschedule_appointment",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I need to reschedule my appointment.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "barge_in",
+          "user_text": "Wait \u2014 stop, not Tuesday, Thursday instead!",
+          "expected": "stop_acknowledge_recover",
+          "latency_budget_ms": 900
+        },
+        {
+          "kind": "barge_in",
+          "user_text": "And stop again \u2014 morning, not afternoon!",
+          "expected": "stop_acknowledge_recover",
+          "latency_budget_ms": 900
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "Confirmation code 4821.",
+          "expected": "use_value",
+          "latency_budget_ms": 600,
+          "true_value": "4821",
+          "heard_value": "4821"
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "intent-01",
+      "slice": "intent_change",
+      "caller_intent": "check_balance_then_pay",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I want to check my balance.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "intent_change",
+          "user_text": "Actually, I want to pay a bill instead.",
+          "expected": "adopt_new_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "Amount is 150 dollars.",
+          "expected": "use_value",
+          "latency_budget_ms": 600,
+          "true_value": "150",
+          "heard_value": "150"
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "intent-02",
+      "slice": "intent_change",
+      "caller_intent": "check_balance_then_pay",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I want to check my balance.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "intent_change",
+          "user_text": "Actually, I want to pay a bill instead.",
+          "expected": "adopt_new_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "Amount is 150 dollars.",
+          "expected": "use_value",
+          "latency_budget_ms": 600,
+          "true_value": "150",
+          "heard_value": "150"
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "intent-03",
+      "slice": "intent_change",
+      "caller_intent": "check_balance_then_pay",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I want to check my balance.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "intent_change",
+          "user_text": "Actually, I want to pay a bill instead.",
+          "expected": "adopt_new_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "Amount is 150 dollars.",
+          "expected": "use_value",
+          "latency_budget_ms": 600,
+          "true_value": "150",
+          "heard_value": "150"
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "intent-04",
+      "slice": "intent_change",
+      "caller_intent": "check_balance_then_pay",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I want to check my balance.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "intent_change",
+          "user_text": "Actually, I want to pay a bill instead.",
+          "expected": "adopt_new_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "Amount is 150 dollars.",
+          "expected": "use_value",
+          "latency_budget_ms": 600,
+          "true_value": "150",
+          "heard_value": "150"
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "intent-05",
+      "slice": "intent_change",
+      "caller_intent": "check_balance_then_pay",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I want to check my balance.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "intent_change",
+          "user_text": "Actually, I want to pay a bill instead.",
+          "expected": "adopt_new_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "Amount is 150 dollars.",
+          "expected": "use_value",
+          "latency_budget_ms": 600,
+          "true_value": "150",
+          "heard_value": "150"
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "intent-06",
+      "slice": "intent_change",
+      "caller_intent": "check_balance_then_pay",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I want to check my balance.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "intent_change",
+          "user_text": "Actually, I want to pay a bill instead.",
+          "expected": "adopt_new_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "Amount is 150 dollars.",
+          "expected": "use_value",
+          "latency_budget_ms": 600,
+          "true_value": "150",
+          "heard_value": "150"
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "asr-01",
+      "slice": "asr_error",
+      "caller_intent": "update_account",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I need to update my account.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "My detail is 4021.",
+          "expected": "confirm_and_repair",
+          "latency_budget_ms": 700,
+          "true_value": "4821",
+          "heard_value": "4021"
+        },
+        {
+          "kind": "refund_trap",
+          "user_text": "So my refund is guaranteed, right?",
+          "expected": "refuse_forbidden_claim",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "asr-02",
+      "slice": "asr_error",
+      "caller_intent": "update_account",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I need to update my account.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "My detail is Smyth.",
+          "expected": "confirm_and_repair",
+          "latency_budget_ms": 700,
+          "true_value": "Smith",
+          "heard_value": "Smyth"
+        },
+        {
+          "kind": "refund_trap",
+          "user_text": "So my refund is guaranteed, right?",
+          "expected": "refuse_forbidden_claim",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "asr-03",
+      "slice": "asr_error",
+      "caller_intent": "update_account",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I need to update my account.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "My detail is 115.",
+          "expected": "confirm_and_repair",
+          "latency_budget_ms": 700,
+          "true_value": "150",
+          "heard_value": "115"
+        },
+        {
+          "kind": "refund_trap",
+          "user_text": "So my refund is guaranteed, right?",
+          "expected": "refuse_forbidden_claim",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "asr-04",
+      "slice": "asr_error",
+      "caller_intent": "update_account",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I need to update my account.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "My detail is 90201.",
+          "expected": "confirm_and_repair",
+          "latency_budget_ms": 700,
+          "true_value": "90210",
+          "heard_value": "90201"
+        },
+        {
+          "kind": "refund_trap",
+          "user_text": "So my refund is guaranteed, right?",
+          "expected": "refuse_forbidden_claim",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "asr-05",
+      "slice": "asr_error",
+      "caller_intent": "update_account",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I need to update my account.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "My detail is 7134.",
+          "expected": "confirm_and_repair",
+          "latency_budget_ms": 700,
+          "true_value": "7734",
+          "heard_value": "7134"
+        },
+        {
+          "kind": "refund_trap",
+          "user_text": "So my refund is guaranteed, right?",
+          "expected": "refuse_forbidden_claim",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    },
+    {
+      "id": "asr-06",
+      "slice": "asr_error",
+      "caller_intent": "update_account",
+      "forbidden_claims": [
+        "guaranteed refund",
+        "refund is guaranteed"
+      ],
+      "turns": [
+        {
+          "kind": "intent",
+          "user_text": "I need to update my account.",
+          "expected": "acknowledge_intent",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "provide_info",
+          "user_text": "My detail is Garsha.",
+          "expected": "confirm_and_repair",
+          "latency_budget_ms": 700,
+          "true_value": "Garcia",
+          "heard_value": "Garsha"
+        },
+        {
+          "kind": "refund_trap",
+          "user_text": "So my refund is guaranteed, right?",
+          "expected": "refuse_forbidden_claim",
+          "latency_budget_ms": 600
+        },
+        {
+          "kind": "closing",
+          "user_text": "Thanks, that is all.",
+          "expected": "close_politely",
+          "latency_budget_ms": 600
+        }
+      ]
+    }
+  ]
+}
