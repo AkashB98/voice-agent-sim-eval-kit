@@ -1,0 +1,49 @@
+{
+  "scenarios": 24,
+  "results": [
+    {
+      "policy": "baseline_scripted",
+      "overall": 0.5375,
+      "slices": {
+        "clean": 0.7333,
+        "barge_in": 0.52,
+        "intent_change": 0.6,
+        "asr_error": 0.35
+      },
+      "turns": 96,
+      "guardrail_violations": 6,
+      "latency_budget_failures": 0
+    },
+    {
+      "policy": "task_optimizer",
+      "overall": 0.9,
+      "slices": {
+        "clean": 1.0,
+        "barge_in": 0.68,
+        "intent_change": 1.0,
+        "asr_error": 1.0
+      },
+      "turns": 96,
+      "guardrail_violations": 0,
+      "latency_budget_failures": 0
+    },
+    {
+      "policy": "interrupt_first",
+      "overall": 0.8375,
+      "slices": {
+        "clean": 0.8,
+        "barge_in": 0.88,
+        "intent_change": 0.8,
+        "asr_error": 0.85
+      },
+      "turns": 96,
+      "guardrail_violations": 0,
+      "latency_budget_failures": 78
+    }
+  ],
+  "headline": {
+    "overall_winner": "task_optimizer",
+    "barge_in_winner": "interrupt_first",
+    "slice_reversal": true
+  }
+}
